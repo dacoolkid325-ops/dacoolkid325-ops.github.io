@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqeel | Developer & Creator</title>
+    <style>
+        :root {
+            /* Liquid Glass / Glassmorphism Variables */
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-main: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --accent: #a8c7fa;
+        }
+
+        body {
+            /* Iridescent violet-blue gradient */
+            background: linear-gradient(135deg, #4f00bc 0%, #29abdf 100%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 3rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 0 0 1rem 0;
+            font-weight: 600;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 0.8rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0 0 1rem 0;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.2s ease, opacity 0.2s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+            opacity: 0.8;
+        }
+
+        a svg {
+            margin-left: 6px;
+            transition: transform 0.2s ease;
+        }
+
+        a:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-item {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 18px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Tags */
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /*  Style Animations */
+        @keyframes smoothFadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-up {
+            animation: smoothFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+
+        /* Squad Section */
+        .squad-list {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .squad-member {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="glass-card animate-up">
+            <h1>Hi, I'm Aqeel 👋</h1>
+            <p>I'm the primary developer and administrator behind the a-REA ecosystem. I specialize in building immersive web environments, developing custom mobile apps with Swift, and creating fast-paced HTML games.</p>
+            <div class="tags">
+                <span class="tag">HTML/JS</span>
+                <span class="tag">Swift Playgrounds</span>
+                <span class="tag">Gemini API</span>
+                <span class="tag">Game Dev</span>
+            </div>
+        </header>
+
+        <!-- Scratch Section -->
+        <section class="glass-card animate-up delay-1">
+            <h2>My Scratch: scratcher_aqeel</h2>
+            <p>Check out where a lot of my interactive coding journey lives. From early logic structures to creative interactive projects.</p>
+            <a href="https://scratch.mit.edu/users/scratcher_aqeel/" target="_blank">
+                Visit scratcher_aqeel 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </section>
+
+        <!-- Projects & Sites Section -->
+        <section class="glass-card animate-up delay-2">
+            <h2>My Sites & Projects</h2>
+            <p>A look into the platforms and games I've built from the ground up.</p>
+            
+            <div class="grid-2">
+                <!-- a-REA -->
+                <div class="project-item">
+                    <h3>The a-REA Platform</h3>
+                    <p>The digital hub for math-related music, games, and news. Featuring a custom community moderation system and smooth, glassmorphic UI.</p>
+                    <a href="https://aqeelchy02.wixsite.com/a-rea" target="_blank">
+                        View Site
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- MASTER -->
+                <div class="project-item">
+                    <h3>MASTER</h3>
+                    <p>A highly competitive cross-platform HTML game. Features 0.5-second cooldown mechanics, bot AI, and distinct 'Original' and 'Modern' modes.</p>
+                </div>
+
+                <!-- Tiny Dash: Infinite -->
+                <div class="project-item">
+                    <h3>Tiny Dash: Infinite</h3>
+                    <p>An ultra-fast rhythmic action game complete with custom leaderboard rankings, dynamic hitboxes, and math-inspired background visuals.</p>
+                </div>
+
+                <!-- ai-REA -->
+                <div class="project-item">
+                    <h3>ai-REA Assistant</h3>
+                    <p>A custom AI companion integrated right into the a-REA web portal, built using Gradio 6.0 and powered by the Gemini API.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Dev Room -->
+        <section class="glass-card animate-up delay-3">
+            <h2>The Dev Room</h2>
+            <p>Shoutout to the leaderboard legends, testers, and friends who make it into the game dev rooms.</p>
+            <div class="squad-list">
+                <span class="squad-member">Hamid</span>
+                <span class="squad-member">Harry V</span>
+                <span class="squad-member">Tudor</span>
+                <span class="squad-member">Mirabelle</span>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
